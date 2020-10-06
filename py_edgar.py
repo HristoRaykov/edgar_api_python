@@ -26,3 +26,14 @@ result = XBRLElement(xbrl.relevant_children_parsed[15]).to_dict()  # returns a d
 com = Company("Oracle Corp", "0001341439")
 tree = com.get_all_filings()
 docs = Company.get_documents(tree)
+
+
+from edgar import Company
+company = Company("Oracle Corp", "0001341439")
+tree = company.get_all_filings(filing_type = "10-K")
+docs = Company.get_documents(tree, no_of_documents=5)
+
+text = TXTML.parse_full_10K(docs[0])
+
+xbrl = XBRL(docs[0])
+result = XBRLElement(xbrl.relevant_children_parsed[5]).to_dict()
