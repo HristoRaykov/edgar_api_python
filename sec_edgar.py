@@ -1,4 +1,5 @@
 # https://github.com/coyo8/sec-edgar
+# pip install secedgar
 from secedgar.filings import CIKLookup, Filing, FilingType
 
 lookup = '0000320193'

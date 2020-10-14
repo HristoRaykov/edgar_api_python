@@ -3,11 +3,13 @@ import requests
 import urllib
 from bs4 import BeautifulSoup
 
-
+import pandas as pd
 
 # define a base url, this would be the EDGAR data Archives
 from api.edgar_urls import *
 
+ciks = pd.read_csv(SYMBOL_CIK_MAP_URL, sep="\t", header=None)
+ciks.columns = ["symbol", "cik"]
 
 cik_num = '886982'
 
