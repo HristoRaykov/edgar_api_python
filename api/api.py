@@ -20,5 +20,3 @@ company_url = BASE_URL + "/" + cik_num
 filing_number = "000156459020045871"
 url = FILING_BY_COMPANY_URL_TMPL.format(cik_num, filing_number)
 
-
-
